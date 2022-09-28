@@ -1,12 +1,13 @@
 package com.alexamanov.utils;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class JsonParser
 {
-    public String parse(String json, String[] keys)
+    public String getValueByPath(String json, String[] keys)
     {
         try {
             String result = null;
@@ -24,6 +25,15 @@ public class JsonParser
             }
 
             return result;
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+
+    public JSONArray parseJsonArray(String json)
+    {
+        try {
+            return (JSONArray) new JSONParser().parse(json);
         } catch (ParseException e) {
             return null;
         }

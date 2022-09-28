@@ -10,6 +10,6 @@ public class GetCurrentAmount
 
         String response = new SendRequestAndGetResponse().execute(CURRENT_AMOUNT_URI);
 
-        return Float.parseFloat(jsonParser.parse(response, new String[]{"data", "amount"}));
+        return Float.parseFloat(jsonParser.getValueByPath(response, new String[]{"data", "amount"}));
     }
 }
