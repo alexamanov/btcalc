@@ -10,7 +10,7 @@ public class GetFullData
 
     public String execute()
     {
-        HashMap<String, String> params = new HashMap<String, String>();
+        HashMap<String, String> params = new HashMap<>();
         StringBuilder uri = new StringBuilder(RESOURCE);
 
         params.put("command", "returnChartData");

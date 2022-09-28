@@ -10,6 +10,9 @@ import java.util.Date;
 
 public class App
 {
+    private final static String OPEN_KEY = "open";
+    private final static String DATE_KEY = "date";
+
     public static void main(String[] args)
     {
         GetFullData getFullData = new GetFullData();
@@ -25,8 +28,8 @@ public class App
         JSONArray jsonArray = jsonParser.parseJsonArray(fullJsonData);
 
         for (Object object: jsonArray) {
-            String openAmount = (String) ((JSONObject) object).get("open");
-            String timestamp = (String) ((JSONObject) object).get("date");
+            String openAmount = (String) ((JSONObject) object).get(OPEN_KEY);
+            String timestamp = (String) ((JSONObject) object).get(DATE_KEY);
 
             System.out.println(new Date(Long.parseLong(timestamp)).toString());
             System.out.println(openAmount);
