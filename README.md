@@ -1,7 +1,10 @@
 ## Bitcon calculator
 
-#### Build
+### Build
 ./gradlew fatJar
 
-#### Run
+### Run
 java -jar build/libs/btcalc-1.1.jar
+
+### Strategy
+![strategy](guide/btcalc.png?raw=true "strategy")
