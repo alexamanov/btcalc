@@ -6,5 +6,5 @@
 ### Run
 java -jar build/libs/btcalc-1.1.jar
 
-### Strategy
+### Simple Strategy
 ![strategy](guide/btcalc.png?raw=true "strategy")
